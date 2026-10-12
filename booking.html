@@ -1,0 +1,237 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Book home services with Ghar Sorted in Islamabad and Rawalpindi.">
+    <title>Book a Service | Ghar Sorted</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container nav-container">
+        <a href="index.html" class="logo" aria-label="Ghar Sorted home">
+            <img src="images/long_ghar_logo.png" alt="Ghar Sorted Logo">
+        </a>
+
+        <button class="menu-toggle" id="menuToggle"
+                type="button" aria-controls="siteNav"
+                aria-expanded="false" aria-label="Toggle navigation">
+            ☰
+        </button>
+
+        <nav class="site-nav" id="siteNav" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+            <a href="booking.html" class="nav-button">Book a Service</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="page-header">
+        <div class="container">
+            <span>BOOK A SERVICE</span>
+            <h1>Let's Get Your Home Sorted</h1>
+            <p>Tell us what you need and choose a convenient time for your service.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container booking-layout">
+
+            <div class="form-card">
+                <h2>Service Details</h2>
+
+                <form id="bookingForm" novalidate>
+
+                    <div class="form-group">
+                        <label for="service">Select Service</label>
+                        <select id="service" name="service" required>
+                            <option value="">Select a service</option>
+                            <option value="plumbing">Plumbing</option>
+                            <option value="electrical">Electrical</option>
+                            <option value="cleaning">Home Cleaning / Maid</option>
+                            <option value="laundry">Laundry</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="plan">Select Plan</label>
+                        <select id="plan" name="plan" required disabled>
+                            <option value="">Select a service first</option>
+                        </select>
+                    </div>
+
+                    <div class="selected-price price-display" aria-live="polite">
+                        <span>Service Price</span>
+                        <strong id="planPrice">Select a plan</strong>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" name="fullName"
+                               placeholder="Enter your full name"
+                               autocomplete="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone"
+                               placeholder="0300-1234567" inputmode="tel" maxlength="14"
+                               autocomplete="tel" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email"
+                               placeholder="you@example.com"
+                               autocomplete="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address">Address</label>
+                        <textarea id="address" name="address" rows="3"
+                                  placeholder="Enter your complete address"
+                                  autocomplete="street-address" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="city">City</label>
+                        <select id="city" name="city" required>
+                            <option value="">Select city</option>
+                            <option value="Islamabad">Islamabad</option>
+                            <option value="Rawalpindi">Rawalpindi</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="preferredDate">Preferred Date</label>
+                        <input type="date" id="preferredDate"
+                               name="preferredDate" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="preferredTime">Preferred Time</label>
+                        <input type="time" id="preferredTime"
+                               name="preferredTime" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="details">Additional Details (Optional)</label>
+                        <textarea id="details" name="details" rows="4"
+                                  placeholder="Tell us anything else we should know..."></textarea>
+                    </div>
+
+                    <p id="bookingError" class="form-error" role="alert" hidden></p>
+
+                    <button type="submit" class="btn btn-primary btn-full">
+                        Confirm Booking
+                    </button>
+
+                </form>
+            </div>
+
+            <aside class="booking-summary">
+                <div id="bookingSummary">
+                    <h2>Booking Summary</h2>
+
+                    <div class="summary-row">
+                        <span>Service</span>
+                        <strong id="summaryService">—</strong>
+                    </div>
+
+                    <div class="summary-row">
+                        <span>Plan</span>
+                        <strong id="summaryPlan">—</strong>
+                    </div>
+
+                    <div class="summary-row">
+                        <span>Price</span>
+                        <strong id="summaryPrice">—</strong>
+                    </div>
+
+                    <div class="summary-row">
+                        <span>Date</span>
+                        <strong id="summaryDate">—</strong>
+                    </div>
+
+                    <div class="summary-row">
+                        <span>Time</span>
+                        <strong id="summaryTime">—</strong>
+                    </div>
+
+                    <div class="summary-note">
+                        <strong>Demo Booking</strong>
+                        <p>
+                            This website is a demonstration.
+                            No actual service will be scheduled
+                            or payment processed.
+                        </p>
+                    </div>
+                </div>
+            </aside>
+
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-content">
+        <div>
+            <a href="index.html" class="footer-logo">Ghar Sorted</a>
+            <p>Trusted Home Services, Right at Your Doorstep.</p>
+        </div>
+
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+
+    <div class="container footer-bottom">
+        <p>© 2026 Ghar Sorted. Demo website.</p>
+    </div>
+</footer>
+
+<!-- BOOKING SUCCESS POPUP -->
+<div class="modal-overlay" id="bookingModal" hidden>
+    <div class="modal" role="dialog" aria-modal="true"
+         aria-labelledby="modalTitle" aria-describedby="modalText">
+        <div class="modal-icon" aria-hidden="true">✓</div>
+        <h2 id="modalTitle">Booking Confirmed!</h2>
+        <p id="modalText">
+            Thank you, <strong id="modalName">—</strong>. Your service has been booked successfully.
+        </p>
+
+        <div class="modal-ref">
+            <span>Booking Reference</span>
+            <strong id="modalRef">—</strong>
+        </div>
+
+        <div class="modal-details">
+            <div><span>Service</span><strong id="modalService">—</strong></div>
+            <div><span>Plan</span><strong id="modalPlan">—</strong></div>
+            <div><span>Date</span><strong id="modalDate">—</strong></div>
+            <div><span>Time</span><strong id="modalTime">—</strong></div>
+            <div class="modal-total"><span>Total</span><strong id="modalPrice">—</strong></div>
+        </div>
+
+        <p class="modal-note">Demo only: no real booking or payment was made.</p>
+
+        <div class="modal-buttons">
+            <a href="confirmation.html" class="btn btn-primary">View Details</a>
+            <button type="button" class="btn btn-secondary" id="modalClose">Done</button>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
